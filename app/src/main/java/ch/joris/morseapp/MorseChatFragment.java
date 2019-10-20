@@ -83,7 +83,6 @@ public class MorseChatFragment extends Fragment implements View.OnClickListener,
         sentMessagesArrayAdapter.addAll(new MessageListItem("1", String.valueOf(System.currentTimeMillis())), new MessageListItem("2", String.valueOf(System.currentTimeMillis())));
         sentMessagesListView.setAdapter(sentMessagesArrayAdapter);
 
-    // TODO: test and finish this clicklistener
         receivedMessagesListView.setOnItemClickListener(clickListener);
         sentMessagesListView.setOnItemClickListener(clickListener);
 
