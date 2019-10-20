@@ -1,0 +1,4 @@
+#Fri Oct 18 16:56:46 CEST 2019
+base.0=/Users/Joris/Data/DEVEL/MorseApp/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
