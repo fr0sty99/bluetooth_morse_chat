@@ -15,7 +15,7 @@ public class DeviceListAdapter extends ArrayAdapter<DeviceListItem> {
     private Context context;
     private int resourceId;
 
-    static class ViewHolder{
+    static class ViewHolder {
         TextView name;
         TextView address;
     }
@@ -37,7 +37,7 @@ public class DeviceListAdapter extends ArrayAdapter<DeviceListItem> {
         final View result;
         ViewHolder holder;
 
-        if(convertView == null) {
+        if (convertView == null) {
             LayoutInflater inflater = LayoutInflater.from(context);
             convertView = inflater.inflate(resourceId, parent, false);
             holder = new ViewHolder();

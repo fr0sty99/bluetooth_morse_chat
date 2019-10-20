@@ -43,22 +43,23 @@
 27-->/Users/Joris/Data/DEVEL/MorseApp/app/src/main/AndroidManifest.xml:9:9-54
 28        android:supportsRtl="true"
 28-->/Users/Joris/Data/DEVEL/MorseApp/app/src/main/AndroidManifest.xml:10:9-35
-29        android:theme="@style/AppTheme" >
-29-->/Users/Joris/Data/DEVEL/MorseApp/app/src/main/AndroidManifest.xml:11:9-40
-30        <activity android:name="ch.joris.morseapp.MainActivity" >
-30-->/Users/Joris/Data/DEVEL/MorseApp/app/src/main/AndroidManifest.xml:13:9-20:20
-30-->/Users/Joris/Data/DEVEL/MorseApp/app/src/main/AndroidManifest.xml:13:19-46
-31            <intent-filter>
-31-->/Users/Joris/Data/DEVEL/MorseApp/app/src/main/AndroidManifest.xml:15:13-19:29
-32                <action android:name="android.intent.action.MAIN" />
-32-->/Users/Joris/Data/DEVEL/MorseApp/app/src/main/AndroidManifest.xml:16:13-65
-32-->/Users/Joris/Data/DEVEL/MorseApp/app/src/main/AndroidManifest.xml:16:21-62
-33
-34                <category android:name="android.intent.category.LAUNCHER" />
-34-->/Users/Joris/Data/DEVEL/MorseApp/app/src/main/AndroidManifest.xml:18:13-73
-34-->/Users/Joris/Data/DEVEL/MorseApp/app/src/main/AndroidManifest.xml:18:23-70
-35            </intent-filter>
-36        </activity>
-37    </application>
-38
-39</manifest>
+29        android:testOnly="true"
+30        android:theme="@style/AppTheme" >
+30-->/Users/Joris/Data/DEVEL/MorseApp/app/src/main/AndroidManifest.xml:11:9-40
+31        <activity android:name="ch.joris.morseapp.MainActivity" >
+31-->/Users/Joris/Data/DEVEL/MorseApp/app/src/main/AndroidManifest.xml:13:9-20:20
+31-->/Users/Joris/Data/DEVEL/MorseApp/app/src/main/AndroidManifest.xml:13:19-46
+32            <intent-filter>
+32-->/Users/Joris/Data/DEVEL/MorseApp/app/src/main/AndroidManifest.xml:15:13-19:29
+33                <action android:name="android.intent.action.MAIN" />
+33-->/Users/Joris/Data/DEVEL/MorseApp/app/src/main/AndroidManifest.xml:16:13-65
+33-->/Users/Joris/Data/DEVEL/MorseApp/app/src/main/AndroidManifest.xml:16:21-62
+34
+35                <category android:name="android.intent.category.LAUNCHER" />
+35-->/Users/Joris/Data/DEVEL/MorseApp/app/src/main/AndroidManifest.xml:18:13-73
+35-->/Users/Joris/Data/DEVEL/MorseApp/app/src/main/AndroidManifest.xml:18:23-70
+36            </intent-filter>
+37        </activity>
+38    </application>
+39
+40</manifest>

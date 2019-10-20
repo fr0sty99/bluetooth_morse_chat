@@ -10,8 +10,8 @@
 
     <TextView
         android:id="@+id/chatTitleTextView"
-        android:layout_width="226dp"
-        android:layout_height="32dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:gravity="left"
         android:text="TextView"
         android:textSize="30sp"

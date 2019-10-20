@@ -170,13 +170,6 @@ public class BluetoothService {
             secureAcceptThread = null;
         }
 
-        /*  not used
-        if (insecureAcceptThread != null) {
-            insecureAcceptThread.cancel();
-            insecureAcceptThread = null;
-        }
-        */
-
         state = STATE_NONE;
 
         // Update UI title
@@ -188,7 +181,6 @@ public class BluetoothService {
         // Create temporary object
         ConnectedThread r;
 
-        // TODO: what is this needed for
         // Synchronize a copy of the ConnectedThread
         synchronized (this) {
             if (state != STATE_CONNECTED) return;
@@ -233,11 +225,7 @@ public class BluetoothService {
         BluetoothService.this.start();
     }
 
-    /**
-     * This thread runs while listening for incoming connections. It behaves
-     * like a server-side client. It runs until a connection is accepted
-     * (or until cancelled).
-     */
+    // This thread runs while listening for incoming connections. It behaves like a server-side client. It runs until a connection is accepted (or until cancelled).
     private class AcceptThread extends Thread {
         // The local server socket
         private final BluetoothServerSocket mmServerSocket;
@@ -250,15 +238,6 @@ public class BluetoothService {
             // Create a new listening server socket
             try {
                 tmpSocket = adapter.listenUsingRfcommWithServiceRecord(NAME_SECURE, MY_UUID_SECURE);
-
-             /*   if (secure) {    // always secure
-                } else {
-                    // ... i.e the communication may be vulnerable to Man In the Middle attacks.
-                    // doesnt use encryption or authentication
-                    tmpSocket = adapter.listenUsingInsecureRfcommWithServiceRecord(
-                            NAME_INSECURE, MY_UUID_INSECURE);
-                } */
-
             } catch (IOException e) {
                 Log.e(TAG, "Socket Type: " + mSocketType + "listen() failed", e);
             }
@@ -382,10 +361,7 @@ public class BluetoothService {
         }
     }
 
-    /**
-     * This thread runs during a connection with a remote device.
-     * It handles all incoming and outgoing transmissions.
-     */
+    // This thread runs during a connection with a remote device. It handles all incoming and outgoing transmissions.
     private class ConnectedThread extends Thread {
         private final BluetoothSocket mmSocket;
         private final InputStream mmInStream;
@@ -432,11 +408,7 @@ public class BluetoothService {
             }
         }
 
-        /**
-         * Write to the connected OutStream.
-         *
-         * @param buffer The bytes to write
-         */
+        // Write to Connected outstream
         public void write(byte[] buffer) {
             try {
                 mmOutStream.write(buffer);

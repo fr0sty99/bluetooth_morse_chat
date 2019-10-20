@@ -34,13 +34,13 @@ public class ConnectDeviceFragment extends Fragment {
         Set<BluetoothDevice> pairedDevices = btAdapter.getBondedDevices();
         if (pairedDevices.size() > 1) {
             for (BluetoothDevice device : pairedDevices) {
+               // TODO: test if we can only display phones instead of all devices if(device.getType())
                 deviceList.add(new DeviceListItem(device.getName(), device.getAddress()));
             }
         }
 
         deviceAdapter = new DeviceListAdapter(getContext(), R.layout.layout_devicelistitem, deviceList);
         btAdapter = BluetoothAdapter.getDefaultAdapter();
-
     }
 
     @Nullable
@@ -51,14 +51,16 @@ public class ConnectDeviceFragment extends Fragment {
 
         deviceListView = parentView.findViewById(R.id.deviceList);
         deviceListView.setAdapter(deviceAdapter);
-
         deviceListView.setOnItemClickListener((new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                TextView deviceAddressTextView = ((TextView) parent.findViewById(R.id.textView_deviceAddress));
+
+                TextView deviceAddressTextView = parent.findViewById(R.id.textView_deviceAddress);
                 String address = deviceAddressTextView.getText().toString();
+
                 Bundle bundle = new Bundle();
                 bundle.putString(EXTRA_DEVICE_ADDRESS, address);
+
                 MorseChatFragment morseChatFragment = new MorseChatFragment();
                 morseChatFragment.setArguments(bundle);
 
